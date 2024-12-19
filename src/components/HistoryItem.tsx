@@ -3,6 +3,9 @@ import { cn } from "../utils/utils";
 function HistoryItem({ isActive }: { isActive?: boolean }) {
   return (
     <div
+      onClick={() => {
+        window.location.hash = "1";
+      }}
       className={cn(
         "rounded-lg p-3 text-black font-[500] cursor-pointer hover:scale-105 active:scale-95 hover:bg-secondary transition",
         {

@@ -49,7 +49,14 @@ function App() {
           ) : (
             <div></div>
           )}
-          <h1 className="text-3xl font-bold">MGPT</h1>
+          <h1
+            className="text-3xl font-bold cursor-pointer active:scale-95"
+            onClick={() => {
+              window.location.hash = "home";
+            }}
+          >
+            MGPT
+          </h1>
           <Avatar />
         </nav>
         <section
@@ -57,7 +64,7 @@ function App() {
             "w-[80%]": open,
           })}
         >
-          {chatId === "home" ? <Hero /> : <ChatSection />}
+          {chatId === "home" || !chatId ? <Hero /> : <ChatSection />}
         </section>
         <section className="relative w-[60%] mx-auto">
           <ChatInput />
