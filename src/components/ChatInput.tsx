@@ -10,7 +10,7 @@ function Input() {
         autoComplete="false"
         className="resize-none w-full min-h-[75px] px-5 pt-6 rounded-3xl border border-[#CBD5E1] text-base"
       />
-      <p className="text-[12px] text-center text-slate-500">
+      <p className="text-[12px] text-center text-slate-500 mb-4">
         This is your public display name. It can be your real name or a
         pseudonym. You can only change this once every 30 days.
       </p>

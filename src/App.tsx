@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Avatar from "./components/Avatar";
 import Hero from "./components/Hero";
-import ChatInput from "./components/ChatInput";
 import ChatSection from "./components/ChatSection";
 import Icon from "./components/Icon";
 import { cn } from "./utils/utils";
@@ -31,7 +30,7 @@ function App() {
   }, []);
 
   return (
-    <main className="h-full flex">
+    <main className="h-full flex overflow-hidden">
       {open && <History onOpen={handleOpen} />}
       <article className="w-full h-full">
         <nav className="sticky top-0 w-full flex items-center justify-between py-5 px-10">
@@ -65,9 +64,6 @@ function App() {
           })}
         >
           {chatId === "home" || !chatId ? <Hero /> : <ChatSection />}
-        </section>
-        <section className="relative w-[60%] mx-auto">
-          <ChatInput />
         </section>
       </article>
     </main>
