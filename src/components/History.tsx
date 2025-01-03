@@ -26,14 +26,22 @@ function History({ onOpen }: { onOpen: (val: boolean) => void }) {
       <button className="text-[#444F74] flex gap-2 items-center justify-center font-semibold bg-white w-full border border-gray-300 py-3 px-4 mb-7 rounded-3xl">
         <img src="/add-btn.svg" /> New Chat
       </button>
-      <div className="mb-3">
+      <div className="mb-7">
         <h3 className="text-[#AFB5C3] font-bold mb-1">Folders</h3>
-        <div className="flex gap-3 p-3 px-4 text-[#444F74] cursor-pointer hover:text-black hover:bg-secondary rounded-lg">
+        <div className="flex gap-3 p-3 px-4 text-[#444F74] cursor-pointer hover:text-black hover:bg-secondary active:scale-95 transition rounded-lg">
           <img src="/folder-icon.svg" />{" "}
           <p className="font-semibold">Folder Saved</p>{" "}
         </div>
       </div>
-      <div className="side-bar-scroll h-[70%] overflow-y-auto pt-5 pe-2">
+      <div className="relative px-1 mb-4">
+        <input
+          type="search"
+          placeholder="Search...."
+          className="p-2 px-4 ps-12 focus-visible:outline-none focus-visible:border-[#444F74] w-full rounded-3xl border border-gray-300 text-[#444F74]"
+        />
+        <img src="/search-icon.svg" className="absolute top-2 left-4" />
+      </div>
+      <div className="side-bar-scroll h-[62%] overflow-y-auto pt-5 pe-2">
         <div>
           <HistoryItem
             isActive
