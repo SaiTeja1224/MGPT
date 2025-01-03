@@ -5,16 +5,19 @@ function Input() {
   return (
     <>
       <TextareaAutosize
-        placeholder="Message here"
+        placeholder="Message Here!"
         autoCorrect="false"
         autoComplete="false"
-        className="resize-none w-full min-h-[75px] px-5 pt-6 rounded-3xl border border-[#CBD5E1] text-base"
+        className="bg-[#F7F8FA] focus:bg-white font-bold resize-none w-full min-h-[103px] p-6 pb-3 rounded-[10px] border border-[#CACACA] text-lg transition"
       />
       <p className="text-[12px] text-center text-slate-500 mb-4">
-        This is your public display name. It can be your real name or a
-        pseudonym. You can only change this once every 30 days.
+        M GPT can make mistakes. Check important info.
       </p>
-      <Icon containerClassName="absolute right-5 top-4" src="/send-message.svg" alt="send message"/>
+      <Icon
+        containerClassName="absolute right-5 bottom-[35%]"
+        src="/send-message.svg"
+        alt="send message"
+      />
     </>
   );
 }

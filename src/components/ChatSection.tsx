@@ -2,21 +2,23 @@ import AIMessage from "./AIMessage";
 import UserMessage from "./UserMessage";
 import ChatInput from "./ChatInput";
 
-function ChatSection() {
+function ChatSection({ onCitation }: { onCitation: (val?: boolean) => void }) {
   return (
-    <div className="h-full pt-10 pb-5">
-      <div className="h-full overflow-y-auto space-y-12 mb-4">
-        <UserMessage />
-        <AIMessage />
-        <UserMessage />
-        <AIMessage />
-        <UserMessage />
-        <AIMessage />
-      </div>
-        <section className="sticky bottom-0 w-[80%] mx-auto">
+    <>
+      <div className="h-full">
+        <div className="h-full overflow-y-auto space-y-12 mb-10">
+          <UserMessage />
+          <AIMessage onCitation={onCitation} />
+          <UserMessage />
+          <AIMessage onCitation={onCitation} />
+          <UserMessage />
+          <AIMessage onCitation={onCitation} />
+        </div>
+        <section className="sticky bottom-2 w-[98.5%] mx-auto">
           <ChatInput />
         </section>
-    </div>
+      </div>
+    </>
   );
 }
 

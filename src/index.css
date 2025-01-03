@@ -29,8 +29,7 @@
   }
 
   body {
-    background-color: rgb(241, 245, 249, 1);
-    @apply text-black;
+    @apply text-black bg-white;
     /* Firefox compatibility */
     /* scrollbar-width: thin; */
     /* scrollbar-color: #3D7EF3 #E5E5E5; */
@@ -44,6 +43,10 @@
   ::-webkit-scrollbar-track {
     background: transparent;
     border-radius: 10px;
+  }
+
+  #side-bar {
+    background-color: rgb(241, 245, 249, 1);
   }
   #side-bar > div.side-bar-scroll::-webkit-scrollbar-track {
     background: #e5e5e5;
@@ -64,5 +67,14 @@
   /* Thumb when active (clicked) */
   ::-webkit-scrollbar-thumb:active {
     @apply bg-primary;
+  }
+}
+
+@layer utilities {
+  .side-bg {
+    background-color: rgb(241, 245, 249, 1);
+  }
+  .hover-effect {
+    @apply hover:scale-110 active:scale-95 transition;
   }
 }

@@ -2,14 +2,16 @@ import { cn } from "../utils/utils";
 
 function Icon({
   containerClassName,
+  onClick,
   ...rest
 }: React.ImgHTMLAttributes<HTMLImageElement> & {
   containerClassName?: string;
 }) {
   return (
     <div
+      onClick={onClick}
       className={cn(
-        "p-2 cursor-pointer rounded-full hover:bg-secondary/25 hover:scale-110 active:scale-95 transition",
+        "p-2 cursor-pointer rounded-full  hover-effect",
         containerClassName
       )}
     >
@@ -19,3 +21,4 @@ function Icon({
 }
 
 export default Icon;
+//hover:bg-secondary/25
