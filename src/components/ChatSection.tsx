@@ -3,6 +3,11 @@ import UserMessage from "./UserMessage";
 import ChatInput from "./ChatInput";
 
 function ChatSection({ onCitation }: { onCitation: (val?: boolean) => void }) {
+
+  const handleMessageSubmit = (message : string) => {
+    console.log(message);
+  }
+
   return (
     <>
       <div className="h-full">
@@ -14,9 +19,7 @@ function ChatSection({ onCitation }: { onCitation: (val?: boolean) => void }) {
           <UserMessage />
           <AIMessage onCitation={onCitation} />
         </div>
-        <section className="sticky bottom-2 w-[98.5%] mx-auto">
-          <ChatInput />
-        </section>
+        <ChatInput onSubmit={handleMessageSubmit}/>
       </div>
     </>
   );

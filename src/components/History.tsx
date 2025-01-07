@@ -23,7 +23,7 @@ function History({ onOpen }: { onOpen: (val: boolean) => void }) {
           <CloseButton onClick={() => onOpen(false)} />
         </div>
       </header>
-      <button className="text-[#444F74] flex gap-2 items-center justify-center font-semibold bg-white w-full border border-gray-300 py-3 px-4 mb-7 rounded-3xl">
+      <button className="text-[#444F74] flex gap-2 items-center justify-center font-semibold bg-white w-full border border-gray-300 py-3 px-4 mb-7 rounded-3xl active:scale-95">
         <img src="/add-btn.svg" /> New Chat
       </button>
       <div className="mb-7">

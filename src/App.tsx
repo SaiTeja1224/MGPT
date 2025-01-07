@@ -61,9 +61,9 @@ function App() {
           </nav>
         )}
         <section
-          className={cn("h-[80%] w-[70%] mx-auto", {
-            "w-[95%]": open || openCitation,
-            "mt-20 h-[80%]": open,
+          className={cn("h-[75%] w-[70%] mx-auto", {
+            "w-[90%]": open || openCitation,
+            "mt-20 h-[75%]": open,
           })}
         >
           {chatId === "home" || !chatId ? (

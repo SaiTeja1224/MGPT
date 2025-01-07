@@ -4,7 +4,8 @@ function Icon({
   containerClassName,
   onClick,
   ...rest
-}: React.ImgHTMLAttributes<HTMLImageElement> & {
+}: Omit<React.ImgHTMLAttributes<HTMLImageElement>,"onClick"> & {
+  onClick ?: (e : React.MouseEvent<HTMLDivElement, MouseEvent>) => void,
   containerClassName?: string;
 }) {
   return (
