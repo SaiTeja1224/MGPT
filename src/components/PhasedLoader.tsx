@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 // Phases to cycle through
 const default_phases = ["Thinking...", "Processing...", "Generating..."];
 
-export default function TextLoader({enable, onComplete, phases} : {enable : boolean, onComplete ?: () => void, phases ?: string[]}) {
+export default function PhasedLoader({enable, onComplete, phases} : {enable : boolean, onComplete ?: () => void, phases ?: string[]}) {
   const [phase, setPhase] = useState(""); // The current phase text being displayed
   const [loading, setLoading] = useState(true);
   const [elapsedTime, setElapsedTime] = useState("");

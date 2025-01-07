@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import PhasedLoader from "./TextLoader";
+import PhasedLoader from "./PhasedLoader";
 
 function AIMessage({ onCitation }: { onCitation: (val?: boolean) => void }) {
 
@@ -44,7 +44,7 @@ function AIMessage({ onCitation }: { onCitation: (val?: boolean) => void }) {
         <div className="border-l-2 border-gray-300 self-stretch my-1"></div>
         <p className="text-gray-500">2:40pm</p>
       </div>
-      <PhasedLoader enable={load} onComplete={handleCompleteLoad} />
+      <PhasedLoader enable={load} onComplete={handleCompleteLoad} phases={["Thinking...", "Brainstorming....", "Checking data....", "etc...."]} />
       <p className="whitespace-pre-line pt-3 pb-5">
         {text}
       </p>
