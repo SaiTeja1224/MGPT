@@ -7,6 +7,7 @@ import { cn } from "./utils/utils";
 import History from "./components/History";
 import Citations from "./components/Citations";
 import Brand from "./components/Branch";
+import FeedbackPopover from "./components/FeedbackPopover";
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -74,6 +75,7 @@ function App() {
         </section>
       </article>
       <Citations isOpen={openCitation} onClose={handleCitation} />
+      <FeedbackPopover />
     </main>
   );
 }

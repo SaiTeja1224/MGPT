@@ -13,7 +13,7 @@ function Citations({
     <aside
       id="side-bar"
       className={cn(
-        "h-full fixed invisible right-0 w-[20%] ps-4 pe-1 translate-x-[100%] transition",
+        "z-10 h-full fixed invisible right-0 w-[20%] ps-4 pe-1 translate-x-[100%] transition",
         {
           "translate-x-0 static visible": isOpen,
         }
