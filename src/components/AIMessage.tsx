@@ -10,7 +10,7 @@ function AIMessage({ onCitation }: { onCitation: (val?: boolean) => void }) {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoad(false);
-    }, 2000)
+    }, 6000)
 
     return () => {
       clearTimeout(timeout);
